@@ -1,0 +1,38 @@
+$primary-color: #444;
+$secondary-color: #eece1a;
+$show-image: true;
+$homepage-image: url(../../assest/images/homepage.png);
+$background-opacity: 0.4;
+
+@mixin easeOut(){
+  transition: all 0.5s ease-out;
+}
+
+@mixin bg-img(){
+  @if $show-image {
+    .bg-img {
+      background: $homepage-image;
+      background-attachment: fixed;
+      background-size: cover;
+      filter: blur(2px);
+      position:absolute;
+      top: 0;
+      right: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -999;
+      
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      background: rgba($primary-color, $background-opacity);
+    }
+  }
+}
+

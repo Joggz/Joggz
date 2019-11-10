@@ -1,41 +1,4 @@
-$primary-color: #444;
-$secondary-color: #eece1a;
-$show-image: true;
-$homepage-image: url(../../assest/images/homepage.png);
-$background-opacity: 0.4;
-
-@mixin easeOut(){
-  transition: all 0.5s ease-out;
-}
-
-@mixin bg-img(){
-  @if $show-image {
-    .bg-img {
-      background: $homepage-image;
-      background-attachment: fixed;
-      background-size: cover;
-      filter: blur(2px);
-      position:absolute;
-      top: 0;
-      right: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: -999;
-      
-    }
-    &:after{
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: -1;
-      background: rgba($primary-color, $background-opacity);
-    }
-  }
-}
-
+@import './config';
 .main {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     max-height: 100vh;
@@ -46,12 +9,12 @@ $background-opacity: 0.4;
     color: white;
     overflow: hidden;
     padding: 4rem;
-    z-index: 99;
+    z-index: 2;
 
     .lg-text{
         font-weight: 300;
         font-size: 5rem;
-        margin-top: 20vh;
+        margin-top: 10vh;
         z-index: 1;
       
      .sec-text{
@@ -62,10 +25,10 @@ $background-opacity: 0.4;
  
     }
     .sm-text {
-      margin-bottom:2rem;
+      margin:2rem 0;
       padding: 0.2rem 1rem;
       font-weight: 400;
-      width: 25rem;
+      width: 35rem;
       background: rgba(lighten($primary-color, 2),0.2);
       border-right: 3px solid rgba($secondary-color,.75);
       white-space: nowrap;
