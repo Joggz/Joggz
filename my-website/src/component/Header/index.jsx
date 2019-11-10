@@ -47,7 +47,7 @@ class Header extends React.Component{
       </div>
       <nav className={`${showClass.join(' ')} menu`} >
         <div className={`${showClass.join(' ')} display-pic`}>
-          <div className="portrait"></div>
+          <div className={`${showClass.join(' ')} portrait`}></div>
         </div>
         <ul className={`${showClass.join(' ')} menu-nav`}>
           <li className={`${showClass.join(' ')} nav-item current`}>
