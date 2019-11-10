@@ -46,21 +46,21 @@ class Header extends React.Component{
         <div className="btn-line"></div>
       </div>
       <nav className={`${showClass.join(' ')} menu`} >
-        <div className="display-pic">
+        <div className={`${showClass.join(' ')} display-pic`}>
           <div className="portrait"></div>
         </div>
         <ul className={`${showClass.join(' ')} menu-nav`}>
-          <li className={`${showClass.join(' ')} nav-item`}>
-            <Link to=''>Home</Link>
+          <li className={`${showClass.join(' ')} nav-item current`}>
+            <Link className='item' to=''>Home</Link>
           </li>
           <li className={`${showClass.join(' ')} nav-item`}>
-            <Link to=''>About Me</Link>
+            <Link className='item' to=''>About Me</Link>
           </li>
           <li className={`${showClass.join(' ')} nav-item`}>
-            <Link to=''>My Work</Link>
+            <Link className='item' to=''>My Work</Link>
           </li>
           <li className={`${showClass.join(' ')} nav-item`}>
-            <Link to=''>How to reach me</Link>
+            <Link className='item' to=''>How to reach me</Link>
           </li>
         </ul>
       </nav>
