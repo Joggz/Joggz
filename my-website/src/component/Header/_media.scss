@@ -1,0 +1,20 @@
+// @media query mixins
+
+// for-phones-only
+@mixin mediaSm() {
+    @media screen and (max-width: 500px){
+        @content  
+    }
+};
+// for -tabs-only
+@mixin mediaMed() {
+    @media screen and (max-width: 500px){
+        @content  
+    }
+};
+// for-large-screens 
+@mixin mediaLg() {
+    @media screen and (min-width: 769) and (max-width: 1170px){
+        @content  
+    }
+}
