@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
-import ReactDOM from 'react-dom';
-import { Route } from 'react-router-dom';
+
+
 
 import './header.scss';
 
@@ -51,18 +51,18 @@ class Header extends React.Component{
         </div>
         <ul className={`${showClass.join(' ')} menu-nav`}>
           <li className={`${showClass.join(' ')} nav-item current`}>
-            <Link className='item' to=''>Home</Link>
+            <Link className='item' to='/'>Home</Link>
           </li>
           <li className={`${showClass.join(' ')} nav-item`}>
-            <Link className='item' to=''>About Me</Link>
+            <Link className='item' to='/about'>About Me</Link>
           </li>
           <li className={`${showClass.join(' ')} nav-item`}>
-            <Link className='item' to=''>My Work</Link>
+            <Link className='item' to='/work'>My Work</Link>
           </li>
           <li className={`${showClass.join(' ')} nav-item`}>
-            <Link className='item' to=''>How to reach me</Link>
+            <Link className='item' to='/contact'>Contact Me</Link>
           </li>
-        </ul>
+        </ul> 
       </nav>
     </div>
     )

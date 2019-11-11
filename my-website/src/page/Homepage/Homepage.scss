@@ -1,60 +1,87 @@
 @import './config';
+@import '../../component/Header/_media';
+
 .main {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    max-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  // background: $primary-color;
+  // height: 100%;
+  color: set-text-color($primary-color);
 
-    @include bg-img();
+  @include bg-img();
 
-.info {
-    color: white;
+  .info {
+    // color: white;
     overflow: hidden;
     padding: 4rem;
-    z-index: 2;
+    // z-index: 2;
 
-    .lg-text{
-        font-weight: 300;
-        font-size: 5rem;
-        margin-top: 10vh;
-        z-index: 1;
-      
-     .sec-text{
-       color: $secondary-color;
-       padding-left: 1.5rem;
-     }
-
- 
-    }
-    .sm-text {
-      margin:2rem 0;
-      padding: 0.2rem 1rem;
+    .lg-text {
       font-weight: 400;
-      width: 35rem;
-      background: rgba(lighten($primary-color, 2),0.2);
-      border-right: 3px solid rgba($secondary-color,.75);
+      font-size: 5rem;
+      margin-top: 10vh;
+      // z-index: 1;
+      // width: 85%;
+      // margin: 4rem auto;
+      // background: red;
+
+
+      .sec-text {
+        color: $secondary-color;
+        padding-left: 1rem;
+      }
+
+    }
+
+    .sm-text {
+      margin: 2rem 0;
+      // padding: 0.2rem 1rem;
+      // font-weight: 400;
+      width: 70vw;
+      background: rgba(lighten($primary-color, 2), 0.2);
+      border-right: 3px solid rgba($secondary-color, .75);
       white-space: nowrap;
       overflow: hidden;
-      transform: translateY(-50%);    
-    } 
-    .anim-typewriter{
+      transform: translateY(-50%);
+      // color: green;  
+    }
+
+    .anim-typewriter {
       animation: typewriter 4s steps(50) 1s 1 normal both,
-                 blinkTextCursor 500ms steps(44) infinite normal;
-                 color:rgba($secondary-color,.75)
-    }
+        blinkTextCursor 500ms steps(44) infinite normal;
+      //  color:rgba($secondary-color,.75);
 
-    @keyframes typewriter{
-      from{width: 0;}
-      to{width: 24em;}
+
 
     }
-    @keyframes blinkTextCursor{
-      from{border-right-color: rgba($primary-color,.75);}
-      to{border-right-color: transparent;}
+
+    @keyframes typewriter {
+
+      from {
+        width: 4em;
+      }
+
+      to {
+        width: 24em;
+      }
+
     }
-    
-    .icons{
-        margin-bottom: 0.5rem;
-      .link{
-        color: white;
+
+    @keyframes blinkTextCursor {
+      from {
+        border-right-color: rgba($primary-color, .75);
+      }
+
+      to {
+        border-right-color: transparent;
+      }
+    }
+
+    .icons {
+      margin-bottom: 0.5rem;
+
+      .link {
+        color: set-text-color($primary-color); 
         padding: 0.4rem;
 
         &:hover {
@@ -63,5 +90,35 @@
         }
       }
     }
-  } 
+  }
+}
+
+@include mediaMed() {
+  .main {
+    text-align: center;
+    align-items: center;
+
+
+
+    .lg-text {
+      font-size: 2rem !important;
+      font-weight: 300 !important;
+      // width: 85%;
+
+      margin: auto;
+
+      // &.sec-text {
+
+      // }
+    }
+    .sm-text {
+      margin: 2rem -7rem 2rem -3rem !important;
+      width: 100vw;
+      text-align: center;
+      font-size: 0.95rem;
+      // color: rgba($secondary-color, .75); 
+      overflow: hidden; 
+    }
+
+  }
 }

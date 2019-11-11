@@ -1,14 +1,17 @@
+@import '../../component/Header/_media';
+
 $primary-color: #444;
 $secondary-color: #eece1a;
 $show-image: true;
 $homepage-image: url(../../assest/images/homepage.png);
-$background-opacity: 0.4;
+$background-opacity: 0.45;
 $dp:url(../../assest/images/dp2.jpeg);
 
 @mixin easeOut() {
     transition: all 0.5s ease-out;
 }
 
+// sets background and overlay
 @mixin bg-img() {
     @if $show-image {
         .bg-img {
@@ -21,10 +24,10 @@ $dp:url(../../assest/images/dp2.jpeg);
             right: 0;
             width: 100vw;
             height: 100vh;
-            z-index: -999;
+            z-index: -9;
 
         }
-
+// sets overlay
         &:after {
             content: '';
             position: absolute;
@@ -37,3 +40,13 @@ $dp:url(../../assest/images/dp2.jpeg);
         }
     }
 }
+
+// set text colour depending on the lightness of the $primary-color
+@function set-text-color($color){
+  @if(lightness($color) > 40){
+    @return #000;
+  } @else {
+      @return #fff;
+  }
+}
+
