@@ -1,6 +1,7 @@
 import React from 'react';
 
 // import WorkData from '../../component/WorkData/index/';
+import Footer from '../../component/Footer/index';
 import Bio from '../../component/Bio';
 import './about.scss';
 
@@ -20,7 +21,7 @@ import './about.scss';
               let me tell you a few things .....
             </h5>
            <Bio />
-           {/* <WorkData/> */}
+           <Footer />
         </div>
     )
  }

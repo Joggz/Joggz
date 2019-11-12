@@ -21,18 +21,19 @@ import './Homepage.scss';
               Web Developer, Front-End Developer, Programmer.
             </p>
             <div className="icons">
-              <Link className='link' to='#'>
-               <FontAwesomeIcon  icon={faFacebookSquare} size='lg'/>
-              </Link>
-              <Link className='link' to='#'>
+              <a href="" className='link'>
+                <FontAwesomeIcon  icon={faFacebookSquare} size='lg'/>
+              </a>
+              {/* <a href="" className='link'>
                 <FontAwesomeIcon  icon={faGithub} size='lg'/>
-              </Link>
-              <Link className='link' to=''>
-                <FontAwesomeIcon  icon={faLinkedin} size='lg'/>
-              </Link>
-              <Link className='link' to=''>
-                <FontAwesomeIcon  icon={faTwitter} size='lg'/>
-              </Link>
+              </a> */}
+              <a href="https://www.linkedin.com/in/idris-olaoye-963459156/" className='link'>
+                  <FontAwesomeIcon  icon={faLinkedin} size='lg'/>
+              </a>
+              <a href="https://twitter.com/laoye_jnr" className='link'>
+                  <FontAwesomeIcon  icon={faTwitter} size='lg'/>
+              </a>
+             
             </div>
             </div>
         </div>
