@@ -1,0 +1,66 @@
+@import '../../page/Homepage/config';
+
+.bio-graph {
+    color: set-text-color($primary-color);
+    
+.about-info {
+    width: 85%;
+    margin: 5vh auto;
+    
+
+    .display-pic{
+        .portrait{
+          grid-area: display-pic;
+
+            width: 150px;
+            height: 150px;
+            background: url(../../assest/images/dp2.jpeg);
+            border-radius: 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: 2px solid $secondary-color;
+        }
+    }
+    display: grid;
+    grid-template-areas: 'display-pic bio bio';
+    grid-template-columns: repeat(3, 1fr);
+
+    .bio {
+        grid-area: bio;
+        margin-bottom: 5vh;
+        .text {
+          color: $secondary-color;
+          font-size: 2rem;
+          text-transform: uppercase;
+        }
+        
+        .bio-text {
+            line-height: 1.5;
+            margin-top: 3vh;
+            font-weight: 400;
+            font-size: 1rem;
+        }
+    }
+}
+}
+
+@include mediaMed(){
+  .about-info{
+    // border: 1px solid red;
+    grid-template-areas: 
+      'bio'
+      'biod';
+      display: none; 
+      grid-template-columns: 1fr !important;
+
+    .portrait{
+      grid-area: bio;
+      display: none;
+    }
+    .bio-text{
+      grid-area: biod;
+      text-align: center;
+      width: 100%; 
+    }
+  }
+}

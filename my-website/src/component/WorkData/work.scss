@@ -1,0 +1,16 @@
+@import '../../page/Homepage/config';
+
+.data {
+    // width: 50px;
+    display: grid;
+    grid-gap: 15px;
+    width: 85%;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    // background: rgba($primary-color, 0.4);
+}
+@include mediaMed(){
+    .data {
+        grid-template-columns: 1fr;
+    }
+}
