@@ -1,0 +1,14 @@
+@import '../../page/Homepage/config';
+
+.layout {
+    background: $primary-color;
+    // max-height: 40vh;
+    color: set-text-color($primary-color);
+    .workplace,
+    .pos,
+    .duration,
+    .role{
+        // border:  1px solid red;
+        margin: 10px;
+    }
+}
