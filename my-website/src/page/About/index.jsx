@@ -19,7 +19,7 @@ import './about.scss';
             </h1>
             <h5 className="sm-text">
               let me tell you a few things .....
-            </h5>
+            </h5> 
            <Bio />
            <Footer />
         </div>
