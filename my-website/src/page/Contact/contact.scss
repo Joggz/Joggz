@@ -1,0 +1,131 @@
+@import '../../component/Header/media';
+
+.img-icon {
+// display: flex;
+    // position: absolute;
+    // top:0;
+    // right: 0;
+    // width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: -1;
+    // border: 1px solid red;
+
+    &:after{
+        content: '';
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(red, 0.5);
+        z-index: -1;
+        background: url('../../assest/images/Screenshot\ .png');
+        filter: blur(2px);
+     }
+ 
+
+    .portrait {
+        background: url(../../assest/images/dp2.jpeg);
+        background-size: cover;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        align-self: center ;
+        margin-top: 10vh;
+
+    }
+
+    .i {
+        background: rgba(#444, 0.45);
+        box-shadow: -5px 5px 5px 1px white;
+        align-items: center;
+        height: 20rem;
+        width: 10rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .icons {
+            margin-top: 2vh;
+            
+            .link {
+                color: white;
+                text-decoration: none;
+                padding: 0.5rem;
+            }
+        }
+
+    }
+    .contact {
+        background-color: #012;
+        // border: 1px solid red;
+        box-shadow: 5px 5px 5px 1px white;
+        height: 20rem;
+        width: 30rem;
+        // display: flex;
+        text-transform: uppercase;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h2{margin-top: 3vh;}
+        h2,
+        h5{
+            color: rgba(#fff, 0.45);
+            text-transform: uppercase;
+            margin-left: 7vw;
+            
+        }
+       
+
+        .main3{
+            // border: 1px solid red;
+            width: inherit;
+            margin-top: 5vh;
+            padding: 10px;
+            color:rgba(#fff, 0.45);
+            .detail{
+                display: flex;
+                justify-content: space-evenly;
+                padding: 5px;
+                .user{
+                    margin-right: 0.6rem;
+                }
+                .env{
+                    margin-left: 1rem;
+                }
+                .phone{
+                    margin-right: 1.6rem;
+                }
+            }
+        }
+    }
+}
+
+@include mediaMed(){
+    .img-icon{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .i{
+            box-shadow: none;
+            height: 3rem;
+            .portrait{
+                display: none;
+            }
+        }
+        .contact{
+            width: 22rem;
+            box-shadow: none;
+            justify-content: center;
+            
+
+            h2,
+            .name{
+                text-align: center;
+            }
+        }
+    }
+}
